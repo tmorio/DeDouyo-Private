@@ -21,7 +21,7 @@
 
         <!-- 商品一覧ボタン -->
         <Button
-            android:id="@+id/button"
+            android:id="@+id/shopButton"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="20dp"
@@ -55,7 +55,7 @@
                 android:layout_height="215dp">
                 <!-- トップ画像View -->
                 <ImageView
-                    android:id="@+id/imageView2"
+                    android:id="@+id/imageMain"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:adjustViewBounds="true"
@@ -72,7 +72,7 @@
 
                 <!-- タイトルテキストView -->
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/contentTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
@@ -86,7 +86,7 @@
 
                 <!-- 巣部タイトルテキストView -->
                 <TextView
-                    android:id="@+id/textView4"
+                    android:id="@+id/contentSubTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
@@ -105,7 +105,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView5"
+                    android:id="@+id/aboutTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
@@ -116,7 +116,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/textView6"
+                    android:id="@+id/aboutContent"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
@@ -135,7 +135,7 @@
                 android:background="@drawable/border">
 
                 <TextView
-                    android:id="@+id/textView7"
+                    android:id="@+id/introTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
@@ -153,6 +153,13 @@
                     android:layout_marginTop="35dp"
                     android:layout_marginEnd="8dp"
                     android:scaleType="centerCrop" />
+
+                <ImageButton
+                    android:id="@+id/button"
+                    android:layout_width="45dp"
+                    android:layout_height="43dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="40dp" />
 
             </FrameLayout>
 
