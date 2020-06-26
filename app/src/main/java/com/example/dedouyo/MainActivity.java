@@ -1,18 +1,14 @@
 package com.example.dedouyo;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.net.Uri;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.os.Environment;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.VideoView;
-
-import java.io.File;
-
 
 public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
@@ -26,17 +22,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        /*
-        // getLocalDownloadDirectory
-        File pathExternalPublicDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
-        String dir = ((File) pathExternalPublicDir).getPath();
+        // setTitle
+        TextView contentTitle = (TextView) findViewById(R.id.contentTitle);
+        contentTitle.setText("サッカー");
 
-        // setVideoSource (from Local)
-        final VideoView videoView = (VideoView) findViewById(R.id.introVideo);
-        videoView.setVideoPath(dir + "/video.mp4");
-        videoView.start();
+        // setSubTitle
+        TextView contentSubTitle = (TextView) findViewById(R.id.contentSubTitle);
+        contentSubTitle.setText("球技");
 
-         */
+        // setIntroduceText
+        TextView aboutContent = (TextView) findViewById(R.id.aboutContent);
+        aboutContent.setText("丸い球体を用いて1チームが11人の計2チームの間で行われるスポーツ競技の一つである。");
 
         // setVideoSource (from Internet)
         videoView = (VideoView) findViewById(R.id.introVideo);
@@ -80,11 +76,9 @@ public class MainActivity extends AppCompatActivity {
         mediaPlayer.seekTo(0);
     }
 
-
     private void changePlayButton() {
         videoControlImageButton.setImageResource(android.R.drawable.ic_media_play);
     }
-
 
     private void changePauseButton() {
         videoControlImageButton.setImageResource(android.R.drawable.ic_media_pause);

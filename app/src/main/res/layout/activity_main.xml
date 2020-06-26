@@ -78,7 +78,7 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="5dp"
 
-                    android:text="サッカー"
+                    android:text="contentTitle"
                     android:textColor="@android:color/background_light"
                     android:textSize="22sp"
                     android:textStyle="bold"
@@ -91,7 +91,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="36dp"
-                    android:text="球技"
+                    android:text="contentSubTitle"
                     android:textColor="@android:color/darker_gray"
                     app:layout_constraintStart_toStartOf="parent" />
             </FrameLayout>
@@ -122,8 +122,7 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="30sp"
                     android:layout_marginEnd="10dp"
-                    android:text=" 11人１チームでやるボールを足で蹴る競技
-です。シンプルでありながら奥が深いスポ...  もっと見る"
+                    android:text="aboutContent"
                     android:textColor="#000"
                     android:textSize="12sp" />
 
