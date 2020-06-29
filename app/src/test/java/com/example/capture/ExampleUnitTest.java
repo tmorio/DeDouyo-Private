@@ -1,4 +1,4 @@
-package com.example.dedouyo;
+package com.example.capture;
 
 import org.junit.Test;
 

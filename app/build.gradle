@@ -5,8 +5,8 @@ android {
     buildToolsVersion "30.0.0"
 
     defaultConfig {
-        applicationId "com.example.dedouyo"
-        minSdkVersion 24
+        applicationId "com.example.capture"
+        minSdkVersion 27
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"

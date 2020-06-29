@@ -2,179 +2,43 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/ch_InfoLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:theme="@style/AppTheme"
+    android:orientation="vertical"
+    android:background="#dfe"
+    android:gravity="center"
     tools:context=".MainActivity">
 
-    <!-- トップ画像フレーム -->
-    <FrameLayout
-        android:id="@+id/ch_itemFrame"
-        android:layout_width="0dp"
-        android:layout_height="76dp"
-        android:background="#333"
-        android:translationZ="2dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <!-- 商品一覧ボタン -->
-        <Button
-            android:id="@+id/ch_shopButton"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="10dp"
-            android:background="#ffd700"
-            android:text="必要な商品を見る"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent" />
-    </FrameLayout>
-
-    <ScrollView
-        android:id="@+id/ch_scroll"
-        android:layout_width="0dp"
-
-        android:layout_height="654dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+    <ImageButton
+        android:id="@+id/analyzeButton"
+        android:layout_width="40dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="27dp"
+        android:background="@drawable/round_button_dd"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
-            android:id="@+id/ch_infoLinear"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+    <Button
 
-            <FrameLayout
-                android:id="@+id/ch_imageLayout"
-                android:layout_width="match_parent"
-                android:layout_height="215dp">
-                <!-- トップ画像View -->
-                <ImageView
-                    android:id="@+id/ch_imageMain"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:adjustViewBounds="true"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/soccer" />
+        android:id="@+id/button_stop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:text="@string/stop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/analyzeButton" />
 
-            </FrameLayout>
-
-            <FrameLayout
-                android:id="@+id/ch_titleLayout"
-                android:layout_width="match_parent"
-                android:layout_height="61dp"
-                android:background="#444">
-
-                <!-- タイトルテキストView -->
-                <TextView
-                    android:id="@+id/ch_contentTitle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="5dp"
-
-                    android:text="contentTitle"
-                    android:textColor="@android:color/background_light"
-                    android:textSize="22sp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent" />
-
-                <!-- 巣部タイトルテキストView -->
-                <TextView
-                    android:id="@+id/ch_contentSubTitle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="36dp"
-                    android:text="contentSubTitle"
-                    android:textColor="@android:color/darker_gray"
-                    app:layout_constraintStart_toStartOf="parent" />
-            </FrameLayout>
-
-            <FrameLayout
-                android:id="@+id/ch_infoLayout"
-
-                android:layout_width="match_parent"
-                android:layout_height="74dp"
-                android:background="@drawable/border"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/ch_aboutTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="5sp"
-                    android:text="概要"
-                    android:textColor="#000"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/ch_aboutContent"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="30sp"
-                    android:layout_marginEnd="10dp"
-                    android:text="aboutContent"
-                    android:textColor="#000"
-                    android:textSize="12sp" />
-
-            </FrameLayout>
-
-            <FrameLayout
-                android:id="@+id/ch_videoLayout"
-                android:layout_width="match_parent"
-                android:layout_height="292dp"
-                android:background="@drawable/border">
-
-                <TextView
-                    android:id="@+id/ch_introTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="5sp"
-                    android:text="紹介動画"
-                    android:textColor="#000"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <VideoView
-                    android:id="@+id/ch_introVideo"
-                    android:layout_width="match_parent"
-                    android:layout_height="244dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="35dp"
-                    android:layout_marginEnd="8dp"
-                    android:scaleType="centerCrop" />
-
-                <ImageButton
-                    android:id="@+id/ch_playButton"
-                    android:layout_width="45dp"
-                    android:layout_height="43dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="40dp" />
-
-            </FrameLayout>
-
-            <Space
-                android:id="@+id/ch_scrollSpace"
-                android:layout_width="wrap_content"
-                android:layout_height="153dp" />
-
-        </LinearLayout>
-    </ScrollView>
-
-    <!-- タイトルフレーム -->
-
-    <!-- 商品一覧ボタンフレーム -->
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="300dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_stop" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
