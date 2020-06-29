@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/InfoLayout"
+    android:id="@+id/ch_InfoLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:theme="@style/AppTheme"
@@ -10,7 +10,7 @@
 
     <!-- トップ画像フレーム -->
     <FrameLayout
-        android:id="@+id/itemFrame"
+        android:id="@+id/ch_itemFrame"
         android:layout_width="0dp"
         android:layout_height="76dp"
         android:background="#333"
@@ -21,7 +21,7 @@
 
         <!-- 商品一覧ボタン -->
         <Button
-            android:id="@+id/shopButton"
+            android:id="@+id/ch_shopButton"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="20dp"
@@ -36,26 +36,28 @@
     </FrameLayout>
 
     <ScrollView
+        android:id="@+id/ch_scroll"
         android:layout_width="0dp"
-        android:layout_height="654dp"
 
+        android:layout_height="654dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
+            android:id="@+id/ch_infoLinear"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <FrameLayout
-                android:id="@+id/imageLayout"
+                android:id="@+id/ch_imageLayout"
                 android:layout_width="match_parent"
                 android:layout_height="215dp">
                 <!-- トップ画像View -->
                 <ImageView
-                    android:id="@+id/imageMain"
+                    android:id="@+id/ch_imageMain"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:adjustViewBounds="true"
@@ -65,14 +67,14 @@
             </FrameLayout>
 
             <FrameLayout
-                android:id="@+id/titleLayout"
+                android:id="@+id/ch_titleLayout"
                 android:layout_width="match_parent"
                 android:layout_height="61dp"
                 android:background="#444">
 
                 <!-- タイトルテキストView -->
                 <TextView
-                    android:id="@+id/contentTitle"
+                    android:id="@+id/ch_contentTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
@@ -86,7 +88,7 @@
 
                 <!-- 巣部タイトルテキストView -->
                 <TextView
-                    android:id="@+id/contentSubTitle"
+                    android:id="@+id/ch_contentSubTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
@@ -97,7 +99,7 @@
             </FrameLayout>
 
             <FrameLayout
-                android:id="@+id/infoLayout"
+                android:id="@+id/ch_infoLayout"
 
                 android:layout_width="match_parent"
                 android:layout_height="74dp"
@@ -105,7 +107,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/aboutTitle"
+                    android:id="@+id/ch_aboutTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
@@ -116,7 +118,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/aboutContent"
+                    android:id="@+id/ch_aboutContent"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
@@ -129,12 +131,13 @@
             </FrameLayout>
 
             <FrameLayout
+                android:id="@+id/ch_videoLayout"
                 android:layout_width="match_parent"
                 android:layout_height="292dp"
                 android:background="@drawable/border">
 
                 <TextView
-                    android:id="@+id/introTitle"
+                    android:id="@+id/ch_introTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
@@ -145,7 +148,7 @@
                     android:textStyle="bold" />
 
                 <VideoView
-                    android:id="@+id/introVideo"
+                    android:id="@+id/ch_introVideo"
                     android:layout_width="match_parent"
                     android:layout_height="244dp"
                     android:layout_marginStart="8dp"
@@ -154,7 +157,7 @@
                     android:scaleType="centerCrop" />
 
                 <ImageButton
-                    android:id="@+id/button"
+                    android:id="@+id/ch_playButton"
                     android:layout_width="45dp"
                     android:layout_height="43dp"
                     android:layout_marginLeft="10dp"
@@ -163,6 +166,7 @@
             </FrameLayout>
 
             <Space
+                android:id="@+id/ch_scrollSpace"
                 android:layout_width="wrap_content"
                 android:layout_height="153dp" />
 

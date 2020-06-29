@@ -23,19 +23,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // setTitle
-        TextView contentTitle = (TextView) findViewById(R.id.contentTitle);
+        TextView contentTitle = (TextView) findViewById(R.id.ch_contentTitle);
         contentTitle.setText("サッカー");
 
         // setSubTitle
-        TextView contentSubTitle = (TextView) findViewById(R.id.contentSubTitle);
+        TextView contentSubTitle = (TextView) findViewById(R.id.ch_contentSubTitle);
         contentSubTitle.setText("球技");
 
         // setIntroduceText
-        TextView aboutContent = (TextView) findViewById(R.id.aboutContent);
+        TextView aboutContent = (TextView) findViewById(R.id.ch_aboutContent);
         aboutContent.setText("丸い球体を用いて1チームが11人の計2チームの間で行われるスポーツ競技の一つである。");
 
         // setVideoSource (from Internet)
-        videoView = (VideoView) findViewById(R.id.introVideo);
+        videoView = (VideoView) findViewById(R.id.ch_introVideo);
         videoView.setVideoURI(Uri.parse("https://moritoworks.com/video.mp4"));
 
         videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        videoControlImageButton = findViewById(R.id.button);
+        videoControlImageButton = findViewById(R.id.ch_playButton);
         videoControlImageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
