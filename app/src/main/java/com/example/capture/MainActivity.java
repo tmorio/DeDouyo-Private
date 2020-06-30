@@ -57,6 +57,8 @@ public class MainActivity extends AppCompatActivity {
 
         cropImageView = (CropImageView)findViewById(R.id.cropImageView);
         croppedImageView = (ImageView)findViewById(R.id.croppedImageView);
+        cropImageView.setCropMode(CropImageView.CropMode.FREE);
+
 
         // Service停止ボタン設定
         Button buttonStop = findViewById(R.id.button_stop);
@@ -89,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // 撮影したスクリーンを表示するImageView
-        imageView = findViewById(R.id.image_view);
+        // imageView = findViewById(R.id.image_view);
 
         // 画面の縦横サイズとdpを取得
         DisplayMetrics displayMetrics = new DisplayMetrics();
@@ -159,7 +161,7 @@ public class MainActivity extends AppCompatActivity {
         bitmap.copyPixelsFromBuffer(buffer);
         image.close();
 
-        imageView.setImageBitmap(bitmap);
+        // imageView.setImageBitmap(bitmap);
 
         // トリミング画像セット
         cropImageView.setImageBitmap(bitmap);
