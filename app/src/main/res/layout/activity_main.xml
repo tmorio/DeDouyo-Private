@@ -41,4 +41,34 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_stop" />
 
+    <Button
+        android:id="@+id/crop_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="248dp"
+        android:layout_marginTop="27dp"
+        android:text="CROP"
+        app:layout_constraintStart_toEndOf="@+id/analyzeButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.isseiaoki.simplecropview.CropImageView
+        xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cropImageView"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:padding="16dp"
+        custom:scv_crop_mode="fit_image"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="209dp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/croppedImageView"
+        android:layout_width="326dp"
+        android:layout_height="214dp"
+        android:layout_gravity="center"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="486dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

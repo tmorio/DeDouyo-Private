@@ -23,6 +23,8 @@ import android.widget.ImageView;
 import java.nio.ByteBuffer;
 import android.widget.Toast;
 
+import com.isseiaoki.simplecropview.CropImageView;
+
 public class MainActivity extends AppCompatActivity {
     private static final int REQUEST_MEDIA_PROJECTION = 1001;
     private MediaProjectionManager mpManager;
@@ -33,6 +35,11 @@ public class MainActivity extends AppCompatActivity {
     private VirtualDisplay virtualDisplay;
     private int screenDensity;
     private ImageView imageView;
+
+    // トリミング用Viewの定義
+    private CropImageView cropImageView;
+    private ImageView croppedImageView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +54,9 @@ public class MainActivity extends AppCompatActivity {
         // Serviceの開始
         //startService(intent);
         startForegroundService(intent);
+
+        cropImageView = (CropImageView)findViewById(R.id.cropImageView);
+        croppedImageView = (ImageView)findViewById(R.id.croppedImageView);
 
         // Service停止ボタン設定
         Button buttonStop = findViewById(R.id.button_stop);
@@ -66,6 +76,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Toast.makeText(context , "要素の抽出を開始します", Toast.LENGTH_LONG).show();
                 getScreenshot();
+            }
+        });
+
+        Button cropButton = (Button)findViewById(R.id.crop_button);
+        cropButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // フレームに合わせてトリミング
+                croppedImageView.setImageBitmap(cropImageView.getCroppedBitmap());
             }
         });
 
@@ -141,7 +160,9 @@ public class MainActivity extends AppCompatActivity {
         image.close();
 
         imageView.setImageBitmap(bitmap);
+
+        // トリミング画像セット
+        cropImageView.setImageBitmap(bitmap);
     }
 
 }
-
